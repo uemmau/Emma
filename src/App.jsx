@@ -8,7 +8,7 @@ function App() {
     <>
     <AuthProvider>
       <Home />
-      <h1>fgjhgf</h1>
+      <h1>hola</h1>
     </AuthProvider>
     </>
   );
