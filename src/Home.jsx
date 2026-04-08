@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import App from "./App";
 import Usuario from "./Usuario";
+import { Link } from "react-router-dom";
 
 function Home() {
   const { user, login, logout } = useContext(AuthContext);
@@ -18,6 +19,8 @@ function Home() {
       ) : (
         <Usuario onLogin={login} />
       )}
+<Link to="/">Home</Link>
+<Link to="/about">About</Link>
     </div>
   );
 }
