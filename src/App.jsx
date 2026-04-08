@@ -2,15 +2,18 @@ import { Component } from "react";
 import { AuthProvider } from "./context/AuthContext";
 import Home from "./Home";
 import "./index.css";
-import Usuario from "./Usuario";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <>
     <AuthProvider>
-      <Home />
-      <h1>hola</h1>
+<BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth" element={<AuthProvider />} />
+      </Routes>
+</BrowserRouter>
     </AuthProvider>
-    </>
   );
 }
 
